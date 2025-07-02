@@ -66,11 +66,14 @@ pip install opensourceleg[dephy]
 # For Moteus actuators
 pip install opensourceleg[moteus]
 
-# For I2C communication
+# For I2C & SPI communication
 pip install opensourceleg[communication]
 
 # For gRPC messaging functionality
 pip install opensourceleg[messaging]
+
+# To install all extra hardware-specific dependencies
+pip install opensourceleg[all]
 ```
 
 ### Available Extras

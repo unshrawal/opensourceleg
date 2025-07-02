@@ -26,13 +26,15 @@ moteus-pi3hat = {version = "^0.3.29", markers = "sys_platform == 'linux' and pla
 board = "^1.0"
 adafruit-circuitpython-bno055 = {version = "^5.4.13", markers = "sys_platform == 'linux' and platform_machine == 'aarch64'"}
 adafruit-circuitpython-lis3dh = {version = "^5.2.2", markers = "sys_platform == 'linux' and platform_machine == 'aarch64'"}
-
 pandas = "^2.2.3"
+spidev = {version = "^3.7", markers = "sys_platform == 'linux'"}
+
 [tool.poetry.extras]
 dephy = ["flexsea"]
 moteus = ["moteus", "moteus-pi3hat"]
-communication = ["smbus2"]
+communication = ["smbus2", "spidev"]
 messaging = ["grpcio", "grpcio-tools", "types-protobuf"]
+all = ["flexsea", "moteus", "moteus-pi3hat", "smbus2", "spidev", "grpcio", "grpcio-tools", "types-protobuf"]
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.2.0"
